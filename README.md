@@ -1,10 +1,10 @@
-# terraform-kubernetes-terraform-cloud-operator
-This module uses the kubernetes provider and beta kubernetes manifest resource to install the Terraform Cloud Operator for Kubernetes.
+# Terraform Cloud Operator Installation Module
+This Terraform module uses the [Kubernetes provider](https://registry.terraform.io/providers/hashicorp/kubernetes/latest) and beta [Kubernetes `manifest` resource](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/manifest) to install the Terraform Cloud Operator for Kubernetes.
 
-By default, it creates a namespace and two secrets named terraformrc and workspacesecrets. The operator
-is installed in that provided namespace.
+By default, it creates a namespace and two secrets named `terraformrc` and `workspacesecrets`. The operator
+is installed in the provided namespace.
 
-An example configuration to use this module could be:
+Example Usage:
 ```
 # main.tf
 provider "kubernetes" {
@@ -25,6 +25,7 @@ module "terraform-cloud-operator" {
   }
 }
 ```
+This configuration uses the `kubeconfig` to configure the kubernetes provider, enables the manifest resource and provisions the 0.0.1 version of the Terraform Cloud Operator module into a workspace named `demo`. It also creates and populates two secret entries in `workspacesecrets`.
 
 ## Requirements
 
