@@ -11,7 +11,7 @@ variable "terraform_credentials_path" {
 
 variable "workspace_secrets" {
   type        = map(string)
-  description = "https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/secret#data"
+  description = "Add sensitive variables, such as your cloud provider credentials, to the workspace."
   default     = {}
 }
 
@@ -59,6 +59,6 @@ variable "image_k8s" {
 
 variable "log_level" {
   type        = string
-  description = "WARNING: use only on terraform-k8s versions > 1.0.0. Configure zap optional flag to adjust log level verbosity. Can be one of 'debug', 'info', 'error'. Defaults to 'debug'."
+  description = "WARNING: use only on terraform-k8s versions > 1.0.0. Configure optional flag to adjust log level verbosity. Can be one of 'debug', 'info', 'error'. Defaults to 'debug'."
   default     = "null"
 }

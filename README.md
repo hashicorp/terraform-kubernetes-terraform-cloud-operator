@@ -68,12 +68,12 @@ No modules.
 | <a name="input_image_k8s"></a> [image\_k8s](#input\_image\_k8s) | image\_k8s is the name (and tag) of the terraform-k8s Docker image that is used for functionality such as workspace sync. This can be overridden per component. | `string` | `"hashicorp/terraform-k8s:1.0.0"` | no |
 | <a name="input_insecure"></a> [insecure](#input\_insecure) | If true it disables certificate validation for all outbound HTTPS connection the operator has to do. It can be used when connecting to TFE instances with self-signed certificates. | `bool` | `false` | no |
 | <a name="input_k8_watch_namespace"></a> [k8\_watch\_namespace](#input\_k8\_watch\_namespace) | k8\_watch\_namespace is the Kubernetes namespace to watch for workspace changes and sync to Terraform Cloud. If this is not set then it will default to the release namespace. | `string` | `"null"` | no |
-| <a name="input_log_level"></a> [log\_level](#input\_log\_level) | WARNING: use only on terraform-k8s versions > 1.0.0. Configure zap optional flag to adjust log level verbosity. Can be one of 'debug', 'info', 'error'. Defaults to 'debug'. | `string` | `"null"` | no |
+| <a name="input_log_level"></a> [log\_level](#input\_log\_level) | WARNING: use only on terraform-k8s versions > 1.0.0. Configure optional flag to adjust log level verbosity. Can be one of 'debug', 'info', 'error'. Defaults to 'debug'. | `string` | `"null"` | no |
 | <a name="input_operator_namespace"></a> [operator\_namespace](#input\_operator\_namespace) | The namespace in which to install the operator and monitor for Workspaces. | `string` | n/a | yes |
 | <a name="input_terraform_credentials_path"></a> [terraform\_credentials\_path](#input\_terraform\_credentials\_path) | Specify the relative path to the file that contains your Terraform Cloud Team API token. | `string` | `"credentials"` | no |
 | <a name="input_terraform_version"></a> [terraform\_version](#input\_terraform\_version) | terraformVersion describes the version of Terraform to use for each workspace. If this is not set then it will default to the latest version of Terraform compiled with the operator. | `string` | `"latest"` | no |
 | <a name="input_tfe_address"></a> [tfe\_address](#input\_tfe\_address) | tfe\_address denotes the address in the form of https://tfe.local for a Terraform Enterprise instance. If this is not set then it will default to Terraform Cloud (https://app.terraform.io). | `string` | `"https://app.terraform.io"` | no |
-| <a name="input_workspace_secrets"></a> [workspace\_secrets](#input\_workspace\_secrets) | https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs/resources/secret#data | `map(string)` | `{}` | no |
+| <a name="input_workspace_secrets"></a> [workspace\_secrets](#input\_workspace\_secrets) | Add sensitive variables, such as your cloud provider credentials, to the workspace. | `map(string)` | `{}` | no |
 
 ## Outputs
 
