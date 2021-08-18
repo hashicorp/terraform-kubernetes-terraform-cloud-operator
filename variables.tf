@@ -29,13 +29,13 @@ variable "create_secrets" {
 
 variable "k8_watch_namespace" {
   type        = string
-  description = "k8_watch_namespace is the Kubernetes namespace to watch for workspace changes and sync to Terraform Cloud. If this is not set then it will default to the release namespace."
+  description = "The Kubernetes namespace to watch for workspace changes and sync to Terraform Cloud. If this is not set then it will default to the release namespace."
   default     = "null"
 }
 
 variable "terraform_version" {
   type        = string
-  description = "terraformVersion describes the version of Terraform to use for each workspace. If this is not set then it will default to the latest version of Terraform compiled with the operator."
+  description = "Describes the version of Terraform to use for each workspace. If this is not set then it will default to the latest version of Terraform compiled with the operator."
   default     = "latest"
 }
 
@@ -47,13 +47,13 @@ variable "insecure" {
 
 variable "tfe_address" {
   type        = string
-  description = "tfe_address denotes the address in the form of https://tfe.local for a Terraform Enterprise instance. If this is not set then it will default to Terraform Cloud (https://app.terraform.io)."
+  description = "Denotes the address in the form of https://tfe.local for a Terraform Enterprise instance. If this is not set then it will default to Terraform Cloud (https://app.terraform.io)."
   default     = "https://app.terraform.io"
 }
 
 variable "image_k8s" {
   type        = string
-  description = "image_k8s is the name (and tag) of the terraform-k8s Docker image that is used for functionality such as workspace sync. This can be overridden per component."
+  description = "The name (and tag) of the terraform-k8s Docker image that is used for functionality such as workspace sync. This can be overridden per component."
   default     = "hashicorp/terraform-k8s:1.0.0"
 }
 
