@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 resource "kubernetes_deployment" "operator_terraform_sync_workspace" {
   depends_on = [kubernetes_secret.terraformrc, kubernetes_secret.workspacesecrets]
 

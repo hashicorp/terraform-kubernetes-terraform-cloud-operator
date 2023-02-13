@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 variable "operator_namespace" {
   type        = string
   description = "The namespace in which to install the operator and monitor for Workspaces."
